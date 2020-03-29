@@ -6,6 +6,8 @@ Created on Sun Mar 29 16:00:16 2020
 @author: gabrielformario
 """
 
+# EP Design de Software 2020-1
+
 import random
 import time 
 
