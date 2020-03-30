@@ -8,10 +8,13 @@ Created on Sun Mar 29 16:00:16 2020
 
 # EP Design de Software 2020-1
 
+# Imports necessários para realizar o EP
 import random
-import time 
+import time  # Apenas para melhorar a visualização no terminal
 
-dinheiro = 200
+dinheiro = 200 # Dinheiro inicial do jogador
+
+# Começo do Loop do Jogo
 while True:
     fase= "COME OUT"
     print()
@@ -21,7 +24,8 @@ while True:
         break
                 
     print(f"Você esta na {fase}.")
-        
+    
+    # Pergunta aposta para o jogador
     aposta = int(input("Faça uma aposta para poder jogar o game, digite 0 para sair: "))
     if aposta == 0 or aposta < 0:
         break
@@ -29,11 +33,12 @@ while True:
     elif aposta > dinheiro :
         print("Aposta maior que valor atual de moedas")
         
-        
+    # Pergunta quais opções de aposta jogador quer fazer     
     pergunta = input("Quais opções de aposta vc quer realizar ?\n 1. Pass Line Bet\n 2. Field\n 3. Any Craps\n" 
                   " 4. Twelve\nEscreva o número da opção para escolher o tipo de aposta: ")
+    
 
-
+# Opção Pass Line Bet de aposta
     if pergunta == '1':
         time.sleep(1)
         print()
@@ -55,15 +60,16 @@ while True:
             dinheiro += aposta
         elif soma == 2 or soma == 3 or soma ==12:
             dinheiro -= aposta
-            
+        
+        # Mudança de Fase dentro do Pass Line Bet para Point
         else:
             fase_pos = 'POINT'
             fase = fase_pos
             time.sleep(2)
             print("Vc mudou de fase agora etá na POINT")
-            print(f"Sua aposta continua valendo e agora o Point é {soma}")
             print()
-            print(f"Agora vc está na fase {fase}, as coisas ficaram diferentes a partir de agora")
+            print(f"Sua aposta continua valendo e agora o Point é {soma}")
+            
             
             while True:
                 
@@ -99,7 +105,7 @@ while True:
         
 
                     
-        
+# Opção Field de aposta        
     elif pergunta == '2':
         print("Vc escolheu Field como opcao de aposta")
         time.sleep(1)
@@ -133,7 +139,7 @@ while True:
             dinheiro += 3*aposta
             
     
-    
+# Opção Any Craps de aposta    
     elif pergunta == '3':
         print("Vc escolheu Any Craps como opcao de aposta")
         time.sleep(1)
@@ -160,7 +166,7 @@ while True:
             dinheiro = dinheiro 
             print("Vc perdeu sua aposta")
             
-            
+# Opção Twelve de aposta            
     elif pergunta == '4':
         print("Vc escolheu Twelve como opcao de aposta")
         time.sleep(1)
