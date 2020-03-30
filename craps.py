@@ -14,6 +14,7 @@ import time
 dinheiro = 200
 while True:
     fase= "COME OUT"
+    print()
     print(f'Seu total de fichas é {dinheiro}.' )
     if dinheiro == 0:
         print("Acabou o dindin =( ")
@@ -94,7 +95,42 @@ while True:
                     
                 else:
                     fase = fase_pos
+        
+
                     
-                
+        
+    elif pergunta == '2':
+        print("Vc escolheu Field como opcao de aposta")
+        time.sleep(1)
+        print()
+        print("Primeiro dado caiu ...")
+        time.sleep(2)
+        dado1 = random.randint(1,6)
+        print(dado1)
+        
+        
+        time.sleep(1)
+        print()
+        print("Segundo dado caiu ...")
+        time.sleep(2)
+        dado2 = random.randint(1,6)
+        print(dado2)
+        soma = dado1 + dado2
+        
+        if soma == 5 or soma == 6 or soma == 7 or soma == 8:
+            dinheiro = 0
+            time.sleep(1)
+            print()
+            print("Que azar! Vc perdeu tudo! =(")
+        elif soma == 3 or soma == 4 or soma == 9 or soma == 11 or soma == 10 or soma == 11:
+            dinheiro += aposta
             
-                
+        elif soma == 2:
+            dinheiro += 2*aposta
+            
+        else:
+            dinheiro += 3*aposta
+            
+            
+            
+            
