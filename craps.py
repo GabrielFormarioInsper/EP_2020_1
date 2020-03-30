@@ -60,6 +60,7 @@ while True:
             fase_pos = 'POINT'
             fase = fase_pos
             time.sleep(2)
+            print("Vc mudou de fase agora etá na POINT")
             print(f"Sua aposta continua valendo e agora o Point é {soma}")
             print()
             print(f"Agora vc está na fase {fase}, as coisas ficaram diferentes a partir de agora")
@@ -131,6 +132,65 @@ while True:
         else:
             dinheiro += 3*aposta
             
+    
+    
+    elif pergunta == '3':
+        print("Vc escolheu Any Craps como opcao de aposta")
+        time.sleep(1)
+        print()
+        print("Primeiro dado caiu ...")
+        time.sleep(2)
+        dado1 = random.randint(1,6)
+        print(dado1)
+        
+        
+        time.sleep(1)
+        print()
+        print("Segundo dado caiu ...")
+        time.sleep(2)
+        dado2 = random.randint(1,6)
+        print(dado2)
+        soma = dado1 + dado2
+                
+        if soma == 2 or soma == 3 or soma == 12:
+            dinheiro += 7*aposta
             
             
+        else:
+            dinheiro = dinheiro 
+            print("Vc perdeu sua aposta")
+            
+            
+    elif pergunta == '4':
+        print("Vc escolheu Twelve como opcao de aposta")
+        time.sleep(1)
+        print()
+        print("Primeiro dado caiu ...")
+        time.sleep(2)
+        dado1 = random.randint(1,6)
+        print(dado1)
+        
+        
+        time.sleep(1)
+        print()
+        print("Segundo dado caiu ...")
+        time.sleep(2)
+        dado2 = random.randint(1,6)
+        print(dado2)
+        soma = dado1 + dado2
+        
+        if soma == 12:
+            print()
+            print("Muita sorte!")
+            dinheiro += 30*aposta
+            
+        else:
+            dinheiro = dinheiro
+            print("Vc perdeu sua aposta")
+        
+        
+        
+
+        
+
             
