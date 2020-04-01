@@ -23,10 +23,9 @@ import time  # Apenas para melhorar a visualização no terminal
 
 
 dinheiro = 200 # Dinheiro inicial do jogador
-
+print("Bem Vindo ao Craps Insper ! ")
 # Começo do Loop do Jogo
 while True:
-    time.sleep(1)
     fase= "COME OUT"
     print()
     
@@ -41,11 +40,14 @@ while True:
     # Pergunta aposta para o jogador
     time.sleep(1)
     aposta = int(input("Faça uma aposta para poder jogar o game, digite 0 para sair: "))
+    
+    # Jogo para se ele digitar 0 ou menor que 0
     if aposta == 0 or aposta < 0:
         break
         
     elif aposta > dinheiro :
         print("Aposta maior que valor atual de moedas")
+        aposta = int(input("Faça uma aposta para poder jogar o game, digite 0 para sair: "))
         
     # Pergunta quais opções de aposta jogador quer fazer     
     pergunta = input("Quais opções de aposta vc quer realizar ?\n 1. Pass Line Bet\n 2. Field\n 3. Any Craps\n" 
@@ -66,6 +68,7 @@ while True:
         print()
         print("Primeiro dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 1
         dado1 = random.randint(1,6)
         print(dado1)
         
@@ -74,6 +77,7 @@ while True:
         print()
         print("Segundo dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 2
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
@@ -104,18 +108,21 @@ while True:
             print()
             time.sleep(2)
             print(" Caso saia qualquer outro número, se mantem na fase de “Point” sem perder ou ganhar e se continua lançando os dados até um veredito, quando sair ou o número do Point ou o 7")
+            
             # Loop dentro da Fase Point até que ele saia desta fase
             while True:
                 
                 print()
                 print("Primeiro dado caiu ...")
                 time.sleep(2)
+                # Lançamento Dado 1 na fase Point
                 dado3 = random.randint(1,6)
                 print(dado3)
                 time.sleep(1)
                 print()
                 print("Segundo dado caiu ...")
                 time.sleep(2)
+                # Lançamento Dado 2 na fase Point
                 dado4 = random.randint(1,6)
                 print(dado4)
                 new_soma = dado3 + dado4
@@ -161,6 +168,7 @@ while True:
         print()
         print("Primeiro dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 1
         dado1 = random.randint(1,6)
         print(dado1)
         
@@ -169,6 +177,7 @@ while True:
         print()
         print("Segundo dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 2
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
@@ -203,6 +212,7 @@ while True:
         print()
         print("Primeiro dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 1
         dado1 = random.randint(1,6)
         print(dado1)
         
@@ -211,6 +221,7 @@ while True:
         print()
         print("Segundo dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 2
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
@@ -239,6 +250,7 @@ while True:
         print()
         print("Primeiro dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 1
         dado1 = random.randint(1,6)
         print(dado1)
         
@@ -247,6 +259,7 @@ while True:
         print()
         print("Segundo dado caiu ...")
         time.sleep(2)
+        # Lançamento Dado 2
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
