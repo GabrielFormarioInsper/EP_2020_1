@@ -20,6 +20,7 @@ CRAPS INSPER
 # Imports necessários para realizar o EP
 import random
 import time  # Apenas para melhorar a visualização no terminal
+import os
 
 dinheiro = 200 # Dinheiro inicial do jogador
 
@@ -134,6 +135,7 @@ while True:
                     
 # Opção Field de aposta        
     elif pergunta == '2':
+        print()
         print("Vc escolheu Field como opcao de aposta")
         print()
         time.sleep(2)
@@ -169,6 +171,7 @@ while True:
             time.sleep(1)
             print()
             print("Que azar! Vc perdeu tudo! =(")
+        
         elif soma == 3 or soma == 4 or soma == 9 or soma == 11 or soma == 10 or soma == 11:
             dinheiro += aposta
             
@@ -181,6 +184,7 @@ while True:
     
 # Opção Any Craps de aposta    
     elif pergunta == '3':
+        print()
         print("Vc escolheu Any Craps como opcao de aposta")
         print()
         time.sleep(2)
@@ -213,6 +217,7 @@ while True:
             
 # Opção Twelve de aposta            
     elif pergunta == '4':
+        print()
         print("Vc escolheu Twelve como opcao de aposta")
         print()
         time.sleep(2)
