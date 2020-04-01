@@ -6,7 +6,16 @@ Created on Sun Mar 29 16:00:16 2020
 @author: gabrielformario
 """
 
-# EP Design de Software 2020-1
+# EP Design de Software 2020-1 / 
+
+"""""""""""""""
+
+
+CRAPS INSPER
+
+
+"""""""""""""""
+
 
 # Imports necessários para realizar o EP
 import random
@@ -40,7 +49,15 @@ while True:
 
 # Opção Pass Line Bet de aposta
     if pergunta == '1':
-        time.sleep(1)
+        print()
+        print("Se a soma dos dados lançados for 7 ou 11 o jogador ganha")
+        time.sleep(2)
+        print()
+        print("Já se os dados somarem 2, 3 ou 12 (chamado de craps) o jogador perde")
+        time.sleep(2)
+        print()
+        print("Já se a soma dos dados der 4, 5, 6, 8, 9 ou 10 o jogo muda para a fase de “Point” e o objetivo muda")
+        time.sleep(2)
         print()
         print("Primeiro dado caiu ...")
         time.sleep(2)
@@ -66,11 +83,20 @@ while True:
             fase_pos = 'POINT'
             fase = fase_pos
             time.sleep(2)
-            print("Vc mudou de fase agora etá na POINT")
+            print()
+            print("Vc mudou de fase agora etá na fase POINT")
             print()
             print(f"Sua aposta continua valendo e agora o Point é {soma}")
-            
-            
+            print()
+            time.sleep(2)
+            print("Se a nova soma dos dados é a mesma do que foi guardado no Point, o jogador ganha o mesmo valor que apostou")
+            print()
+            time.sleep(2)
+            print("Se sair uma soma de valor 7 o jogador perde tudo")
+            print()
+            time.sleep(2)
+            print(" Caso saia qualquer outro número, se mantem na fase de “Point” sem perder ou ganhar e se continua lançando os dados até um veredito, quando sair ou o número do Point ou o 7")
+            # Loop dentro da Fase Point até que ele saia desta fase
             while True:
                 
                 print()
@@ -87,10 +113,11 @@ while True:
                 new_soma = dado3 + dado4
                 print()
                 time.sleep(2)
-                print(f"Soma = {new_soma}")
+                print(f"Soma: {new_soma}")
                 
                 if new_soma == soma:
                     dinheiro += aposta
+                    print("Muito bom vc ganhou !")
                     fase_pos = "COME OUT"
                     break
                     
@@ -108,6 +135,19 @@ while True:
 # Opção Field de aposta        
     elif pergunta == '2':
         print("Vc escolheu Field como opcao de aposta")
+        print()
+        time.sleep(2)
+        print("Se os dados derem 5, 6, 7 ou 8 o jogador perde tudo")
+        print()
+        time.sleep(2)
+        print("Já se derem 3, 4, 9, 10, ou 11 o jogador ganha o mesmo valor que apostou")
+        print()
+        time.sleep(2)
+        print("Já se a soma for 2 o jogador ganha o dobro do que apostou")
+        print()
+        time.sleep(2)
+        print("E finalmente se sai 12 nos dados o jogador ganha o triplo")
+        
         time.sleep(1)
         print()
         print("Primeiro dado caiu ...")
@@ -142,6 +182,9 @@ while True:
 # Opção Any Craps de aposta    
     elif pergunta == '3':
         print("Vc escolheu Any Craps como opcao de aposta")
+        print()
+        time.sleep(2)
+        print("Se o dados derem 2, 3 ou 12 o jogador ganha sete vezes o que apostou, senão perde a aposta")
         time.sleep(1)
         print()
         print("Primeiro dado caiu ...")
@@ -160,15 +203,20 @@ while True:
                 
         if soma == 2 or soma == 3 or soma == 12:
             dinheiro += 7*aposta
+            print("Que sorte! Vc ganhou 7X que apostou!")
             
             
         else:
             dinheiro = dinheiro 
+            print()
             print("Vc perdeu sua aposta")
             
 # Opção Twelve de aposta            
     elif pergunta == '4':
         print("Vc escolheu Twelve como opcao de aposta")
+        print()
+        time.sleep(2)
+        print("Se o dados derem 12 o jogador ganha trinta vezes o que apostou, senão perde a aposta")
         time.sleep(1)
         print()
         print("Primeiro dado caiu ...")
