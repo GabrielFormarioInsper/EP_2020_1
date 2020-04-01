@@ -20,22 +20,26 @@ CRAPS INSPER
 # Imports necessários para realizar o EP
 import random
 import time  # Apenas para melhorar a visualização no terminal
-import os
+
 
 dinheiro = 200 # Dinheiro inicial do jogador
 
 # Começo do Loop do Jogo
 while True:
+    time.sleep(1)
     fase= "COME OUT"
     print()
+    
     print(f'Seu total de fichas é {dinheiro}.' )
     if dinheiro == 0:
         print("Acabou o dindin =( ")
         break
-                
+    
+    time.sleep(1)            
     print(f"Você esta na {fase}.")
     
     # Pergunta aposta para o jogador
+    time.sleep(1)
     aposta = int(input("Faça uma aposta para poder jogar o game, digite 0 para sair: "))
     if aposta == 0 or aposta < 0:
         break
@@ -73,6 +77,9 @@ while True:
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
+        print()
+        time.sleep(2)
+        print(f"Soma: {soma}")
         
         if soma == 7 or soma == 11:
             dinheiro += aposta
@@ -165,6 +172,9 @@ while True:
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
+        print()
+        time.sleep(2)
+        print(f"Soma: {soma}")
         
         if soma == 5 or soma == 6 or soma == 7 or soma == 8:
             dinheiro = 0
@@ -204,6 +214,9 @@ while True:
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
+        print()
+        time.sleep(2)
+        print(f"Soma: {soma}")
                 
         if soma == 2 or soma == 3 or soma == 12:
             dinheiro += 7*aposta
@@ -237,6 +250,9 @@ while True:
         dado2 = random.randint(1,6)
         print(dado2)
         soma = dado1 + dado2
+        print()
+        time.sleep(2)
+        print(f"Soma: {soma}")
         
         if soma == 12:
             print()
@@ -245,6 +261,7 @@ while True:
             
         else:
             dinheiro = dinheiro
+            print()
             print("Vc perdeu sua aposta")
         
         
