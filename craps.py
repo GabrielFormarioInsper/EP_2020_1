@@ -57,10 +57,13 @@ while True:
 # Opção Pass Line Bet de aposta
     if pergunta == '1':
         print()
-        print("Se a soma dos dados lançados for 7 ou 11 o jogador ganha")
+        print("Você escolheu Pass Line Bet como opção de aposta")
+        print()
+        time.sleep(2)
+        print("Se a soma dos dados lançados for 7 ou 11 o jogador ganha o valor que apostou")
         time.sleep(2)
         print()
-        print("Já se os dados somarem 2, 3 ou 12 (chamado de craps) o jogador perde")
+        print("Já se os dados somarem 2, 3 ou 12 (chamado de craps) o jogador perde o valor que apostou")
         time.sleep(2)
         print()
         print("Já se a soma dos dados der 4, 5, 6, 8, 9 ou 10 o jogo muda para a fase de “Point” e o objetivo muda")
@@ -107,7 +110,7 @@ while True:
             print("Se sair uma soma de valor 7 o jogador perde tudo")
             print()
             time.sleep(2)
-            print(" Caso saia qualquer outro número, se mantem na fase de “Point” sem perder ou ganhar e se continua lançando os dados até um veredito, quando sair ou o número do Point ou o 7")
+            print("Caso saia qualquer outro número, se mantem na fase de “Point” sem perder ou ganhar e se continua lançando os dados até um veredito, quando sair ou o número do Point ou o 7")
             
             # Loop dentro da Fase Point até que ele saia desta fase
             while True:
@@ -132,12 +135,12 @@ while True:
                 
                 if new_soma == soma:
                     dinheiro += aposta
-                    print("Muito bom vc ganhou !")
+                    print("Muito bom você ganhou !")
                     fase_pos = "COME OUT"
                     break
                     
                 elif new_soma == 7:
-                    print("Vc perdeu TUDO ! Que azar :/")
+                    print("Você perdeu TUDO ! Que azar :/")
                     dinheiro = 0 
                     fase_pos = fase
                     break
@@ -150,7 +153,7 @@ while True:
 # Opção Field de aposta        
     elif pergunta == '2':
         print()
-        print("Vc escolheu Field como opcao de aposta")
+        print("Você escolheu Field como opcao de aposta")
         print()
         time.sleep(2)
         print("Se os dados derem 5, 6, 7 ou 8 o jogador perde tudo")
@@ -189,7 +192,7 @@ while True:
             dinheiro = 0
             time.sleep(1)
             print()
-            print("Que azar! Vc perdeu tudo! =(")
+            print("Que azar! VocÊ perdeu tudo! =(")
         
         elif soma == 3 or soma == 4 or soma == 9 or soma == 11 or soma == 10 or soma == 11:
             dinheiro += aposta
@@ -204,7 +207,7 @@ while True:
 # Opção Any Craps de aposta    
     elif pergunta == '3':
         print()
-        print("Vc escolheu Any Craps como opcao de aposta")
+        print("Você escolheu Any Craps como opcao de aposta")
         print()
         time.sleep(2)
         print("Se o dados derem 2, 3 ou 12 o jogador ganha sete vezes o que apostou, senão perde a aposta")
@@ -231,18 +234,18 @@ while True:
                 
         if soma == 2 or soma == 3 or soma == 12:
             dinheiro += 7*aposta
-            print("Que sorte! Vc ganhou 7X que apostou!")
+            print("Que sorte! Você ganhou 7X que apostou!")
             
             
         else:
             dinheiro = dinheiro 
             print()
-            print("Vc perdeu sua aposta")
+            print("Você perdeu sua aposta")
             
 # Opção Twelve de aposta            
     elif pergunta == '4':
         print()
-        print("Vc escolheu Twelve como opcao de aposta")
+        print("Você escolheu Twelve como opcao de aposta")
         print()
         time.sleep(2)
         print("Se o dados derem 12 o jogador ganha trinta vezes o que apostou, senão perde a aposta")
@@ -275,7 +278,7 @@ while True:
         else:
             dinheiro = dinheiro
             print()
-            print("Vc perdeu sua aposta")
+            print("Você perdeu sua aposta")
         
         
         
